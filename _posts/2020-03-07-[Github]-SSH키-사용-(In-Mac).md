@@ -1,5 +1,6 @@
 ---
-title: [Github] SSH키 사용 (In Mac)
+categories: git
+tags: [git, github, ssh]
 ---
 
 ## [Git] SSH키 사용 (In Mac)
