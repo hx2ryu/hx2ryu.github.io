@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kevin Ryu"
 description              : "Keep looking. Don't settle."
-url                      : ""
+url                      : "https://hx2ryu.github.io"
 baseurl                  : ""
 
 repository               : "hx2ryu/hx2ryu" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
