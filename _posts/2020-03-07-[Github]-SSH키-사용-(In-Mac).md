@@ -1,4 +1,13 @@
-## [Github] SSH키 사용 (In Mac)
+---
+layout: post
+title: [Github] SSH키 사용 (In Mac)
+categories: git
+tags: [git, github, ssh]
+---
+
+
+
+## [Git] SSH키 사용 (In Mac)
 
 ### 1. 키 생성
 
