@@ -25,6 +25,6 @@ tags: [git, github, ssh]
   - Title: 적당한 이름 입력
   - **Key: 공개키 파일 내용 입력**
     - 터미널에서 cd ~/.ssh입력
-    - cat **id_rsa.pub(조금 전 생성한 공개키 파일명)** 입력
+    - cat **id_rsa.pub**(조금 전 생성한 공개키 파일명) 입력
     - 내용 복사 후 다시 웹으로 이동하여 Key 입력란에 입력.
 - 해당 Repository에 push도 사용할 경우 **Allow write access**에 체크.
