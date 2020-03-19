@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kevin's Tech Blog"
+title                    : "케빈의 노트"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kevin Ryu"
@@ -110,7 +110,7 @@ analytics:
 author:
     name             : "Kevin Ryu"
     avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-    bio              : "A software engineer."
+    bio              : "IT/재테크 관련 지식을 공부하고 기록하는 공간입니다."
     location         : "Seoul, Republic of Korea"
     email            : hx2ryu@gmail.com
     #links:
