@@ -3,10 +3,6 @@ Date: 2020-03-18
 Tag: colab, google drive
 ---
 
-
-
-## [Colab] Google Drive 연동
-
 - 연동하는 3가지 방법 중 마운팅하는 방법이 소스가 가장 간단해보여서 정리함.
 
 
