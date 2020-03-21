@@ -1,6 +1,6 @@
 ---
 title: "[Python] File Access(with 사용법)"
-Tag: python, with
+Tags: [python, with]
 ---
 
 
