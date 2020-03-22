@@ -1,6 +1,6 @@
 ---
 title: "[Colab] matplotlib 한글폰트 설정"
-tags: [python, colab, matplotlib, font]
+Tags: [python, colab, matplotlib, font]
 ---
 
 
