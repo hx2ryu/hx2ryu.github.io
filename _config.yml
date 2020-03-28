@@ -1,25 +1,14 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
 
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-#theme                  : "minimal-mistakes-jekyll"
+# Theme
 remote_theme           : "mmistakes/minimal-mistakes@4.18.1"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "케빈의 노트"
+title                    : "샘쿤의 노트"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Kevin Ryu"
+name                     : "Sam Kun"
 description              : "Keep looking. Don't settle."
 url                      : "https://hx2ryu.github.io"
 baseurl                  : ""
@@ -108,7 +97,7 @@ analytics:
 
 # Site Author
 author:
-    name             : "Kevin Ryu"
+    name             : "Sam Kun"
     avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
     bio              : "IT/재테크 관련 지식을 공부하고 기록하는 공간입니다."
     location         : "Seoul, Republic of Korea"
