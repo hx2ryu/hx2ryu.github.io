@@ -1,6 +1,7 @@
 ---
 title: "[Colab] 로컬파일 업로딩 & 다운로딩"
-Tags: [colab, python, 파일업로드]
+categories: "Colab"
+Tags: [colab, python, 파일 업로드]
 ---
 
 
