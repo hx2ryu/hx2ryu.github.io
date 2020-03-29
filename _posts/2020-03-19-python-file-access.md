@@ -1,5 +1,6 @@
 ---
 title: "[Python] File Access(with 사용법)"
+categories: "Python"
 Tags: [python, with]
 ---
 
