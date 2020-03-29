@@ -1,5 +1,6 @@
 ---
 title: "[Python] 서울 종합변원 상권분석 #2"
+categories: "Data Analytics"
 Tags: [python, 데이터 분석]
 toc: true
 ---
