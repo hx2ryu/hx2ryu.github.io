@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{% if post.header.teaser %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% capture teaser %}{{ post.header.teaser }}{% endcapture %}</span></p>
+<p class="p1"><span class="s1">{% else %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% assign teaser = site.teaser %}</span></p>
+<p class="p1"><span class="s1">{% endif %}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{% if post.id %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% assign title = post.title | markdownify | remove: "&lt;p&gt;" | remove: "&lt;/p&gt;" %}</span></p>
+<p class="p1"><span class="s1">{% else %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% assign title = post.title %}</span></p>
+<p class="p1"><span class="s1">{% endif %}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="{{ include.type | default: "list" }}__item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% if include.type == "grid" and teaser %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="archive__item-teaser"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img src=</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{% if teaser contains "://" %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"{{ teaser }}"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{% else %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"{{ teaser | relative_url }}"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{% endif %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>alt=""&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% endif %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2 class="archive__item-title" itemprop="headline"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{% if post.link %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="{{ post.link }}"&gt;{{ title }}&lt;/a&gt; &lt;a href="{{ post.url | relative_url }}" rel="permalink"&gt;&lt;i class="fas fa-link" aria-hidden="true" title="permalink"&gt;&lt;/i&gt;&lt;span class="sr-only"&gt;Permalink&lt;/span&gt;&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{% else %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="{{ post.url | relative_url }}" rel="permalink"&gt;{{ title }}&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{% endif %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% if post.read_time %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="page__meta"&gt;&lt;i class="far fa-clock" aria-hidden="true"&gt;&lt;/i&gt; {% include read-time.html %}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% endif %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% if post.excerpt %}&lt;p class="archive__item-excerpt" itemprop="description"&gt;{{ post.excerpt | markdownify | strip_html | truncate: 160 }}&lt;/p&gt;{% endif %}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+</body>
+</html>
