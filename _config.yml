@@ -4,7 +4,7 @@ remote_theme           : "mmistakes/minimal-mistakes@4.18.1"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-kr"
 title                    : "샘쿤의 노트"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -55,9 +55,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true
+search_full_content      : true
+search_provider          : google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -89,11 +89,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
+    tracking_id          : "UA-161438555-1"
+    anonymize_ip         : true
 
 # Site Author
 author:
@@ -102,13 +101,13 @@ author:
     bio              : "IT/재테크 관련 지식을 공부하고 기록하는 공간입니다."
     location         : "Seoul, Republic of Korea"
     email            : hx2ryu@gmail.com
-    #links:
-     #   - label: "Email"
-     #       icon: "fas fa-fw fa-envelope-square"
-     #       url: mailto:hx2ryu@gmail.com
-     #   - label: "GitHub"
-      #      icon: "fab fa-fw fa-github"
-       #     url: "https://github.com/hx2ryu"
+    links:
+        - label: "Email"
+            icon: "fas fa-fw fa-envelope-square"
+            url: mailto:hx2ryu@gmail.com
+        - label: "GitHub"
+            icon: "fab fa-fw fa-github"
+            url: "https://github.com/hx2ryu"
   
 # Site Footer
 footer:
@@ -262,12 +261,13 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
-      type: posts
+        path: ""
+        type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+        
+        layout: single
+        author_profile: true
+        read_time: true
+        comments: true
+        share: true
+        related: true
