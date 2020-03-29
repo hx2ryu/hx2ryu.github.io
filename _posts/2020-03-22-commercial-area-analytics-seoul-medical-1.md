@@ -1,10 +1,9 @@
 ---
-Title: "[Python] 서울 종합변원 상권분석 #1"
+title: "[Python] 서울 종합변원 상권분석 #1"
 categories: "Data Analytics"
 Tags: [python, 데이터 분석, 상권분석]
 toc: true
 ---
-
 
 
 ### 1. 상권정보 파일데이터 다운
