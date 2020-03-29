@@ -1,6 +1,6 @@
 ---
-Date: 2020-03-18
 title: "[Colab] Google Drive 연동하기"
+categories: "Colab"
 Tags: [colab, google drive]
 ---
 
