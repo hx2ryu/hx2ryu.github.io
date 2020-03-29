@@ -1,5 +1,5 @@
 ---
-title: "[Python] File Access(with 사용법)"
+title: "[Python] with 사용법(File Access)"
 categories: "Python"
 Tags: [python, with]
 ---
