@@ -92,7 +92,7 @@ analytics:
   provider               : "google-universal"
   google:
     tracking_id          : "UA-161438555-1"
-    anonymize_ip         : true
+    anonymize_ip         : false
 
 # Site Author
 author:
@@ -100,15 +100,10 @@ author:
     avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
     bio              : "IT/재테크 관련 지식을 공부하고 기록하는 공간입니다."
     location         : "Seoul, Republic of Korea"
-    email            : hx2ryu@gmail.com
-    links:
-        - label: "Email"
-            icon: "fas fa-fw fa-envelope-square"
-            url: mailto:hx2ryu@gmail.com
-        - label: "GitHub"
-            icon: "fab fa-fw fa-github"
-            url: "https://github.com/hx2ryu"
-  
+    email            : "hx2ryu@gmail.com"
+    github           : "hx2ryu"
+    #linkedin         :
+    
 # Site Footer
 footer:
   links:
@@ -136,6 +131,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -157,7 +153,6 @@ exclude:
   - log
   - node_modules
   - package.json
-  - package-lock.json
   - Rakefile
   - README
   - tmp
