@@ -1,71 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!-- Including InstantSearch.js library and styling --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;script&gt;</span></p>
-<p class="p1"><span class="s1">// Instanciating InstantSearch.js with Algolia credentials</span></p>
-<p class="p1"><span class="s1">const search = instantsearch({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>appId: '{{ site.algolia.application_id }}',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>apiKey: '{{ site.algolia.search_only_api_key }}',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>indexName: '{{ site.algolia.index_name }}',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>searchParameters: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>restrictSearchableAttributes: [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'title',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'content'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
-<p class="p1"><span class="s1">});</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">const hitTemplate = function(hit) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const url = hit.url;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const title = hit._highlightResult.title.value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const content = hit._highlightResult.html.value;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return `</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="list__item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="archive__item-title" itemprop="headline"&gt;&lt;a href="{{ site.baseurl }}${url}"&gt;${title}&lt;/a&gt;&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="archive__item-excerpt" itemprop="description"&gt;${content}&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/article&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>`;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">// Adding searchbar and results widgets</span></p>
-<p class="p1"><span class="s1">search.addWidget(</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>instantsearch.widgets.searchBox({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>container: '.search-searchbar',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>{% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Enter your search term..." }}'</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>})</span></p>
-<p class="p1"><span class="s1">);</span></p>
-<p class="p1"><span class="s1">search.addWidget(</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>instantsearch.widgets.hits({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>container: '.search-hits',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>templates: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>item: hitTemplate</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>})</span></p>
-<p class="p1"><span class="s1">);</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">// Starting the search</span></p>
-<p class="p1"><span class="s1">search.start();</span></p>
-<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-</body>
-</html>
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '{{ site.algolia.application_id }}',
+  apiKey: '{{ site.algolia.search_only_api_key }}',
+  indexName: '{{ site.algolia.index_name }}',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    {% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}
+    placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Enter your search term..." }}'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+// Starting the search
+search.start();
+</script>
