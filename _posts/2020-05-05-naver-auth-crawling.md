@@ -1,10 +1,9 @@
 ---
 title: "[웹크롤링] 네이버 로그인 인증"
-Categories: 웹크롤링
-Tags: [python, 웹크롤링]
+categories: "웹크롤링
+tags: [python, 웹크롤링]
 toc: true
 ---
-
 
 
 ### 1. 라이브러리 추가 및 유틸리티 설치
