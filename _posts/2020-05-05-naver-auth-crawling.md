@@ -21,17 +21,26 @@ from selenium import webdriver
 ### 2. 구현
 
 ```python
-chrome_driver_path = '크롬드라이버 설치된 위치'
+chrome_driver_path = '크롬드라이버 설치된 위치' # 로컬 설치 위치
 login_url = 'https://nid.naver.com/'
+
+# 로그인 정보
 id = '개인 아이디'
 pw = '개인 패스워드'
 
+# 옵션 추가
+options = webdriver.ChromeOptions()
+options.add_argument('headless') # 브라우저 뛰우지 않기
+
+# 페이지 정보 불러오기
 driver = webdriver.Chrome(chrome_driver_path)
 driver.get(login_url)
 
+# 로그인 정보 입력
 driver.find_element_by_id('id').send_keys(id)
 driver.find_element_by_id('pw').send_keys(pw)
 
+# 로그인 버튼 클릭
 driver.find_element_by_css_selector('#frmNIDLogin > fieldset > input').click()
 ```
 
