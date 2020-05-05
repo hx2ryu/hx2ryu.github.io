@@ -92,7 +92,7 @@ plt.figure(figsize=(15, 4))
 sns.countplot(data=df_seoul, x='시군구명')
 ```
 
-![서울시 구별 의료기관 분포1](/assets/seoul_district_barplot.png)
+![서울시 구별 의료기관 분포1](/assets/posting_src/seoul_district_barplot.png)
 
 
 
@@ -101,7 +101,7 @@ sns.countplot(data=df_seoul, x='시군구명')
 df_seoul[['위도', '경도', '시군구명']].plot.scatter(x='경도', y='위도', figsize=(8, 7), grid=True)
 ```
 
-![서울시 구별 의료기관 분포2](/assets/seoul_district_scatterplot1.png)
+![서울시 구별 의료기관 분포2](/assets/posting_src/seoul_district_scatterplot1.png)
 
 
 
@@ -111,7 +111,7 @@ plt.figure(figsize=(9, 8))
 sns.scatterplot(data=df_seoul, x='경도', y='위도', hue='시군구명')
 ```
 
-![서울시 구별 의료기관 분포3](/assets/seoul_district_scatterplot2.png)
+![서울시 구별 의료기관 분포3](/assets/posting_src/seoul_district_scatterplot2.png)
 
 
 
