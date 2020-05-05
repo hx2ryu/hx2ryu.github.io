@@ -1,6 +1,6 @@
 ---
-title: "[웹 크롤링] 네이버 로그인 인증"
-Categories: "웹 크롤링"
+title: "[웹크롤링] 네이버 로그인 인증"
+Categories: [웹크롤링]
 Tags: [python, 웹크롤링]
 toc: true
 ---
