@@ -1,6 +1,6 @@
 ---
 title: "Lifecycle [WPF]"
-categories: "Windows Application"
+categories: "Windows"
 Tags: [wpf, c#]
 ---
 
