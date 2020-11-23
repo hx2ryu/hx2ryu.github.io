@@ -74,7 +74,7 @@ public partial class App : Application
 
 - Shutdown: Application 종료.
 
-![](/assets/posting_src/knn-1.png/lifecycle_wpf.png)
+![](../assets/posting_src/lifecycle_wpf.png)
 
 
 
